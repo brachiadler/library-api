@@ -20,6 +20,7 @@ const getAllBooks = (req, res) => {
         countPages: Math.ceil(bookS.length / limit),
         array: paginatedBooks
     });
+    console.log(req.currentDate);
 };
 
 //קבלת ספר עפ"י קוד ספר
@@ -30,6 +31,7 @@ const getBookById = (req, res) => {
         return res.status(404).json({ message: `not found book with code ${code}` }); 
     }
     res.status(200).json(book);
+    console.log(req.currentDate);
 };
 
 //הוספת ספר חדש

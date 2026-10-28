@@ -17,6 +17,7 @@ const getAllUsers = (req, res) => {
         countPages: Math.ceil(userS.length / limit),
         array: paginatedUsers
     });
+    console.log(req.currentDate);
 };
 
 //הרשמה
